@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Soft beige/cream background for peaceful feel */
+    --background: 40 20% 97%;
+    --foreground: 30 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 20%;
+
+    /* Warm golden amber for spiritual warmth */
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft lavender for secondary elements */
+    --secondary: 270 30% 92%;
+    --secondary-foreground: 30 15% 20%;
+
+    /* Muted sage green tones */
+    --muted: 100 20% 92%;
+    --muted-foreground: 30 10% 45%;
+
+    /* Soft coral/rose accent */
+    --accent: 15 70% 85%;
+    --accent-foreground: 30 15% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+    
+    /* Custom spiritual gradient */
+    --gradient-spiritual: linear-gradient(135deg, hsl(38 92% 50% / 0.1), hsl(270 30% 92% / 0.3));
+    --gradient-hero: linear-gradient(180deg, hsl(40 20% 97%), hsl(270 30% 96%));
+    
+    /* Custom shadows */
+    --shadow-soft: 0 4px 20px hsl(38 92% 50% / 0.1);
+    --shadow-card: 0 2px 10px hsl(30 15% 20% / 0.05);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 30 20% 12%;
+    --foreground: 40 20% 95%;
+
+    --card: 30 20% 15%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 30 20% 15%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 20% 25%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 30 15% 25%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 15 60% 40%;
+    --accent-foreground: 40 20% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 30 15% 25%;
+    --input: 30 15% 25%;
+    --ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-display {
+    font-family: 'Lora', serif;
+  }
+  
+  .spiritual-gradient {
+    background: var(--gradient-spiritual);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+}
