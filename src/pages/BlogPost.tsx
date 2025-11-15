@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowLeft } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
+import AdComponent from "@/components/AdComponent";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -64,6 +65,16 @@ const BlogPost = () => {
               <div className="whitespace-pre-line text-foreground/90 leading-relaxed">
                 {post.content}
               </div>
+            </div>
+
+            {/* 📰 In-article ad */}
+            <div className="my-12">
+              <AdComponent
+                data-ad-client="ca-pub-1682168765289599"
+                data-ad-slot="5802456201"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              />
             </div>
 
             <div className="mt-12 pt-8 border-t border-border">
