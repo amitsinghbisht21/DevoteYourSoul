@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,34 @@ const BlogPost = () => {
     );
   }
 
+  // Build blocks from the post content (simple markdown-like parsing)
+  const contentBlocks = useMemo(() => {
+    if (!post || !post.content) return [] as string[];
+    return post.content.split(/\n\n+/).map((b) => b.trim());
+  }, [post]);
+
+  useEffect(() => {
+    if (!post) return;
+    document.title = `${post.title} — Devote Your Soul`;
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', post.excerpt || '');
+    return () => {
+      // optional: restore or clear description when unmounting
+    };
+  }, [post]);
+
+  const fallbackSvgDataUrl = `data:image/svg+xml;utf8,` + encodeURIComponent(`
+    <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'>
+      <rect width='100%' height='100%' fill='#f3f4f6'/>
+      <text x='60' y='140' font-family='Arial, Helvetica, sans-serif' font-size='36' fill='#111827'>Image placeholder</text>
+    </svg>
+  `);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -62,20 +91,139 @@ const BlogPost = () => {
             </div>
 
             <div className="prose prose-lg max-w-none">
-              <div className="whitespace-pre-line text-foreground/90 leading-relaxed">
-                {post.content}
+              <div className="text-foreground/90 leading-relaxed">
+                {contentBlocks.length === 0 && (
+                  <p className="text-muted-foreground">No content available for this post.</p>
+                )}
+
+                {/* Render blocks, insert ad after first 3 paragraph blocks */}
+                {(() => {
+                  const nodes: any[] = [];
+                  let paragraphCount = 0;
+
+                  contentBlocks.forEach((block, idx) => {
+                    // IMAGE placeholder: // IMAGE: /path
+                    if (block.startsWith('// IMAGE:')) {
+                      const path = block.replace('// IMAGE:', '').trim();
+                      nodes.push(
+                        <img
+                          key={`img-${idx}`}
+                          src={path}
+                          alt={post.title}
+                          decoding="async"
+                          onError={(e) => {
+                            const t = e.currentTarget as HTMLImageElement;
+                            t.onerror = null;
+                            t.src = fallbackSvgDataUrl;
+                          }}
+                          className="rounded-lg mb-6 w-full object-cover"
+                        />
+                      );
+                      return;
+                    }
+
+                    if (block.startsWith('## ')) {
+                      const text = block.replace(/^##\s*/, '');
+                      nodes.push(
+                        <h2 key={`h2-${idx}`} className="mt-6 mb-2 font-semibold">
+                          {text}
+                        </h2>
+                      );
+                      return;
+                    }
+
+                    if (block.startsWith('### ')) {
+                      const text = block.replace(/^###\s*/, '');
+                      nodes.push(
+                        <h3 key={`h3-${idx}`} className="mt-4 mb-2 font-medium">
+                          {text}
+                        </h3>
+                      );
+                      return;
+                    }
+
+                    if (block.startsWith('> ')) {
+                      const text = block.replace(/^>\s*/, '');
+                      nodes.push(
+                        <blockquote key={`bq-${idx}`} className="pl-4 border-l-4 italic text-muted-foreground">
+                          {text}
+                        </blockquote>
+                      );
+                      return;
+                    }
+
+                    // Paragraph
+                    const html = block.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br/>');
+                    paragraphCount += 1;
+                    nodes.push(
+                      <div key={`p-${idx}`} className="mb-4" dangerouslySetInnerHTML={{ __html: html }} />
+                    );
+
+                    // Insert ad after the third paragraph (only once)
+                    if (paragraphCount === 3) {
+                      nodes.push(
+                        <div key={`ad-after-3`} className="my-12">
+                          <AdComponent
+                            data-ad-client="ca-pub-1682168765289599"
+                            data-ad-slot="5802456201"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"
+                          />
+                        </div>
+                      );
+                    }
+                  });
+
+                  return nodes;
+                })()}
+                
               </div>
             </div>
 
-            {/* 📰 In-article ad */}
-            <div className="my-12">
-              <AdComponent
-                data-ad-client="ca-pub-1682168765289599"
-                data-ad-slot="5802456201"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              />
-            </div>
+            {/* Insert Ad after first 3 actual paragraphs */}
+            {post.content && (
+              <div className="my-12">
+                <AdComponent
+                  data-ad-client="ca-pub-1682168765289599"
+                  data-ad-slot="5802456201"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                />
+              </div>
+            )}
+
+            {/* Related Posts */}
+            <section className="mt-12">
+              <h2 className="font-poppins text-2xl font-semibold mb-6">Related Posts</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {(() => {
+                  const sameCategory = blogPosts.filter((p) => p.id !== post.id && p.category === post.category);
+                  let pool = sameCategory.length >= 3 ? sameCategory : blogPosts.filter((p) => p.id !== post.id);
+                  // shuffle pool and take 3
+                  for (let i = pool.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [pool[i], pool[j]] = [pool[j], pool[i]];
+                  }
+                  return pool.slice(0, 3).map((rp) => (
+                    <Link key={rp.id} to={`/blog/${rp.slug}`} className="flex flex-col items-start">
+                      <img
+                        src={rp.image}
+                        alt={rp.title}
+                        decoding="async"
+                        onError={(e) => {
+                          const t = e.currentTarget as HTMLImageElement;
+                          t.onerror = null;
+                          t.src = fallbackSvgDataUrl;
+                        }}
+                        className="w-full h-36 object-cover rounded-md mb-3"
+                      />
+                      <h3 className="font-semibold">{rp.title}</h3>
+                      <p className="text-sm text-muted-foreground">{(rp.excerpt || '').split(' ').slice(0,20).join(' ')}{(rp.excerpt || '').split(' ').length>20? '...' : ''}</p>
+                    </Link>
+                  ));
+                })()}
+              </div>
+            </section>
 
             <div className="mt-12 pt-8 border-t border-border">
               <div className="flex items-center justify-between">

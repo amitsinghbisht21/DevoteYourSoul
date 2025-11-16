@@ -47,16 +47,23 @@ const Blog = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <BlogCard
-                  key={post.id}
-                  title={post.title}
-                  excerpt={post.excerpt}
-                  category={post.category}
-                  date={post.date}
-                  slug={post.slug}
-                />
-              ))}
+              {filteredPosts.map((post) => {
+                const cardExcerpt = post.excerpt
+                  ? post.excerpt.split(" ").slice(0, 25).join(" ") + (post.excerpt.split(" ").length > 25 ? "..." : "")
+                  : "";
+
+                return (
+                  <BlogCard
+                    key={post.id}
+                    title={post.title}
+                    excerpt={cardExcerpt}
+                    category={post.category}
+                    date={post.date}
+                    slug={post.slug}
+                    image={post.image}
+                  />
+                );
+              })}
             </div>
 
             {filteredPosts.length === 0 && (
