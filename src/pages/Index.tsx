@@ -67,6 +67,7 @@ const Index = () => {
                   category={post.category}
                   date={post.date}
                   slug={post.slug}
+                  image={post.image}
                 />
               ))}
             </div>
