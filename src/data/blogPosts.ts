@@ -16,51 +16,51 @@ export const blogPosts: BlogPost[] = [
     slug: "when-you-feel-lost-read-this",
     excerpt:
       "When you feel lost, it’s often an invitation to slow down, listen, and discover a truer direction. Practical, gentle steps to find clarity and regain steady ground.",
-    content: `There are seasons in life when the world seems to shift beneath you and the map you relied on no longer fits. The sensation of being lost can be painful, but it is not a final verdict about your life — rather, it often marks the beginning of a deeper, truer awakening.
+    content: `There are seasons in life when the known map no longer fits the terrain beneath your feet. You may have lost a job, a relationship may have shifted, or an old sense of identity quietly unravels. These moments can feel like exile from yourself. Yet the Bhagavad Gita teaches that disorientation often precedes clarity — it is the crack that lets light in.
 
-// IMAGE: /assets/blog-images/when-you-feel-lost-read-this.svg
+  In the Gita, Arjuna arrives at Kurukshetra paralysed by doubt and sorrow; he cannot see the path forward. Krishna's response is not to supply an external map but to invite inner reorientation: to see action, duty, and identity through the lens of one's higher nature rather than transient outcomes. When you feel lost, the first Gita lesson is to shift perspective: you are not merely what happens to you.
 
-## The Meaning of Being Lost
+  // IMAGE
 
-Feeling lost can arise from many places: the end of a relationship, a career pivot, spiritual questioning, or simply the quiet erosion of an identity you once trusted. The first important reframe is to see this state as a threshold, not a failure. When the path you were following dissolves, it creates space for a more aligned route to emerge.
+  ## The Spiritual Meaning of Being Lost
 
-When I teach and counsel, I have noticed a common pattern: people who move through 'lostness' with curiosity and compassion almost always discover a clearer sense of purpose afterward. The discomfort becomes the soil for growth.
+  The Gita reframes suffering and confusion as opportunities to investigate the nature of the self. Arjuna's crisis exposes the gap between the petty self (limited, attached, fearful) and the deeper Self (the witness, steady and wise). Being lost can be an invitation to step back into witness consciousness — to notice emotions, ask careful questions, and avoid reactive decisions. This pause is itself a spiritual practice: it uncovers where identity has hardened around outcomes, roles, or achievements.
 
-> "In stillness, the answers that noise obscures become audible." — contemporary reflection
+  Consider how attachment to identity shapes choices: when you define yourself entirely by a role or result, losing that becomes existentially threatening. The Gita's remedy is disciplined reflection and right action: practice small, steady choices without clinging. That shift loosens the grip of panic and opens fertile ground for new directions.
 
-## Practical Steps to Reconnect
+  // IMAGE
 
-### 1) Name the Experience
-Don’t pile meaning onto the feeling. Say to yourself, "I feel lost," and allow the phrase to exist without an urgent need to fix it. Naming reduces reactivity and opens a window for observation.
+  ## Practical Steps, Gita-Guided
 
-// IMAGE: /assets/blog-images/when-you-feel-lost-read-this.svg
+  1) Reframe the Moment as a Teacher
+  See the lostness as information rather than punishment. Ask: "What is this experience asking me to notice?" The Gita invites us to treat difficulty as a teacher if we meet it with patience.
 
-### 2) Short, Sensory Practices
-Grounding through the senses is one of the fastest ways to settle the mind. Try this 2-minute practice: notice five things you can see, four you can touch, three you can hear, two you can smell, and one you can taste. The practice returns you to direct experience and calms the storytelling mind.
+  2) Reconnect to Duty (Svadharma) — Small and Real
+  Krishna asks Arjuna to perform his duty without attachment to outcome. Translate this practically: identify a small, faithful action that aligns with your values — a 10-minute practice, a short conversation, a service task. Doing what's yours to do, even in miniature, restores agency and reveals next steps.
 
-### 3) Small Acts of Direction
-You don't need a master plan. Choose a single, small, low-risk action that feels slightly aligned — a page of journaling, a short walk, a class, an email to someone who inspires you. These tiny movements create momentum and reveal next steps.
+  3) Cultivate Witnessing Awareness
+  Practice a simple daily check-in: notice sensations, name dominant emotions, and return to the breath. This creates the inner space to observe choices rather than be carried by them. Witnessing reduces reactivity and helps you test new options calmly.
 
-## Real-Life Example
+  // IMAGE
 
-One student I worked with left a secure role and spent months feeling disoriented. Rather than rushing into a new job, she began morning walks and a five-minute writing habit. Over time, a persistent interest in teaching mindfulness surfaced. Her eventual path emerged from simple, consistent practices rather than a forced decision.
+  ## Working with Uncertainty — Exercises
 
-## Recognizing Gentle Signs
+  - Micro-experiments: try a tiny, reversible choice for one week (e.g., write one paragraph each morning). Small tests produce useful data and avoid long swings.
+  - The 'Detach-and-Do' Ritual: set an intention, act with care, then consciously release expectations. A brief breath ceremony after completion emulates the Gita's practice of action without clinging.
 
-- Recurring ideas that won’t quiet down.
-- A sense of ease around a surprising option.
-- Small doors opening without excessive force.
+  ## A Longer Example (Applied)
 
-These are subtle, not always dramatic. Learn to notice them and test them with small steps.
+  One person I guided left a long-term job and felt untethered. Using Gita-inspired practices, she began by identifying a modest duty — weekly community teaching — and a daily reflective habit. She never rushed the outcome; instead, she tracked small indicators: curiosity returning, clarity arriving around what energised her. Over months, a clear vocational direction appeared. The point was not haste but steady, faithful action without emotional over-investment.
 
-## About the Author
+  // IMAGE
 
-I’ve spent over a decade studying mindfulness, classical texts like the Bhagavad Gita, and contemporary contemplative psychology. I teach meditation, mentor people during transitions, and blend scriptural insight with practical, modern tools to help others find clarity.
+  ## About the Author
 
-## Closing Invitation
+  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching mindfulness, practical Gita study, and mentoring individuals in transitions. He blends scriptural insight with accessible practices for daily life.
 
-If you’re feeling lost today, be gentle. Listen rather than panic. If you’d like, pick one tiny step from this article and try it for a week — curiosity is the gateway to clarity.
-`,
+  ## Closing Invitation
+
+  If you are feeling lost, treat the state as a spiritual doorway. Take one tiny, aligned action today and notice what it teaches you. With patience and the Gita's guidance — action without attachment, curiosity in uncertainty, and steady witness — new directions appear.`,
     category: "Self-Growth",
     date: "Oct 13, 2025",
     image: "/assets/blog-images/when-you-feel-lost-read-this.webp",
@@ -72,45 +72,46 @@ If you’re feeling lost today, be gentle. Listen rather than panic. If you’d 
     slug: "finding-peace-present-moment",
     excerpt:
       "Presence is available now — we only need practices that anchor attention, quiet the mind, and help us respond rather than react. Simple, effective tools included.",
-    content: `Peace is not a distant prize; it's a capacity that grows when we prioritize direct experience over narrative. The human mind tends to loop through memories and projections, which can obscure the calm that is actually available in this moment.
+    content: `Peace is not a distant prize; it is a cultivated skill anchored in attentive practice. The Bhagavad Gita consistently invites a return to steadiness: even in the middle of moral conflict, Krishna's guidance is to steady the mind and act from that calm. Presence is not mysticism — it's trained attention.
 
-// IMAGE: /assets/blog-images/finding-peace-present-moment.svg
+  // IMAGE
 
-## Why We Avoid the Present
+  ## Why We Drift from the Present
 
-Our brains evolved to predict; prediction kept us safe. Today, that predictive tendency often translates into worry or rumination. The remedy is not to fight the mind but to train attention to return, again and again, to what’s here.
+  Our nervous systems are wired to predict; prediction is useful but often manifests as rumination in modern contexts. The Gita’s remedy is repeated, intentional return — a training protocol for attention. Instead of fighting thought, learn the discipline of noticing and returning to the task at hand. This is the essence of presence.
 
-## Foundational Practices
+  ## Practical Gita-Based Practices for Presence
 
-### Mindful Breathing (2–5 minutes)
-Start with three deep, intentional breaths. Notice the path of the air. If your mind wanders, gently bring it back. Regular practice rewires reactivity into steadiness.
+  1) Micro-Breathing Rituals
+  Start the day with three measured breaths: inhale, brief pause, exhale. This simple ritual aligns attention and prepares the mind for action. Krishna’s instruction to steady the self can be embodied in micro-practices like this.
 
-### The 5–4–3–2–1 Grounding
-Use the senses to anchor yourself when overwhelm strikes: list five things you see, four you can touch, three you hear, two you smell, and one you taste.
+  2) Single-Tasking as Devotion
+  The Gita reframes action as devotion when done with full attention. Turn small tasks into offerings: do one thing fully, without partial attention. This practice amplifies focus and reduces the cognitive cost of switching.
 
-// IMAGE: /assets/blog-images/finding-peace-present-moment.svg
+  // IMAGE
 
-### Single-Tasking
-In a culture of multitasking, single-tasking becomes revolutionary. When you give one activity your full attention, the mind learns clarity and fatigue reduces.
+  3) Sensory Grounding (5–4–3–2–1)
+  When overwhelmed, list five things you see, four you can touch, three you hear, two you can smell, and one you can taste. This simple exercise returns the mind to present data, calming story-driven thoughts.
 
-## A Practical Workshop Story
+  ## Integrating Presence into a Busy Life
 
-In a session I led, participants practiced mindful-eating with a single raisin. The exercise—so simple it felt silly—opened an unexpected quiet that many described as restorative. Presence is often hiding in small acts.
+  - Morning: a short breath ritual and one chosen intention for the day.
+  - Midday: a two-minute check-in to notice posture and breath.
+  - Evening: a brief gratitude or reflection practice to close the day.
 
-## Bringing It Into Daily Life
+  // IMAGE
 
-- Morning ritual: three mindful breaths on waking.
-- Midday pause: a two-minute sensory check-in.
-- Evening review: one grateful note before sleep.
+  ## Stories from Practice
 
-## About the Author
+  In workshops, participants often resist slowness. Yet when they practice mindful-eating or walking for even a few minutes, many report a surprising quietness and a decrease in mental chatter. The Gita’s wisdom is practical: repeated return to attention yields measurable calm.
 
-I teach mindfulness grounded in both classical wisdom and contemporary practice. My work includes group workshops, online courses, and private mentoring focused on presence and resilience.
+  ## About the Author
 
-## Closing Thought
+  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching mindfulness, practical Gita interpretation, and mentoring groups and individuals in presence-based practices.
 
-Peace isn't an endpoint. It's a skill you cultivate by returning your attention to what is present, over and over. Start small, be consistent, and notice how everyday life becomes a little quieter.
-`,
+  ## Closing Thought
+
+  Presence is an unfolding habit. The Gita asks you to return, again and again, to stabilise the mind. Start with small, reliable practices and notice how consistency becomes the path to deeper peace.`,
     category: "Mindfulness",
     date: "Oct 10, 2025",
     image: "/assets/blog-images/finding-peace-present-moment.webp",
@@ -121,38 +122,44 @@ Peace isn't an endpoint. It's a skill you cultivate by returning your attention 
     slug: "signs-the-universe-is-guiding-you",
     excerpt:
       "Subtle signs — repeated symbols, unexpected calm, and effortless openings — can help you recognize guidance. Learn practical ways to notice and test these nudges.",
-    content: `Guidance rarely arrives like a neon sign. More often it comes as a quiet current: a repeated number, a phrase that keeps appearing, a sudden sense of peace around a choice. Learning to distinguish this quiet guidance from noise requires practice.
+    content: `Guidance rarely announces itself as a thunderbolt. The Bhagavad Gita models a subtler way: inner movement, persistent interest, and a steady sense of ease often signal a correct direction. Krishna's counsel encourages measured testing rather than impulsive leaps.
 
-// IMAGE: /assets/blog-images/signs-the-universe-is-guiding-you.svg
+  // IMAGE
 
-## What Guidance Often Looks Like
+  ## Recognizing Quiet Signs
 
-### Synchronicities
-Small coincidences that have deep personal meaning—like repeatedly encountering the same number, song, or phrase—can function as signposts. Notice your inner reaction: does it feel opening or constricting?
+  1) Repetition with Resonance
+  When certain motifs or ideas recur in your life with emotional resonance, attend to them. The Gita suggests that repeated inner movement often reflects deeper attunement.
 
-### Ease and Flow
-When choices unfold with relative ease — not forced or full of friction — that can be a sign you’re aligned with a larger movement.
+  2) Ease Versus Force
+  Guidance often carries a quality of ease; if pursuing something repeatedly feels natural and opens space rather than tightness, that may be confirmation.
 
-## How to Test a Nudge
+  3) Inner Calm
+  A genuine nudge tends to support steadiness rather than agitation. Use the Gita’s measure: does the impulse align with dharma and inner clarity?
 
-1. Pause and sense your body’s reaction.
-2. Take a small, low-risk step in the direction of the nudge.
-3. Observe what unfolds; is there more clarity or friction?
+  // IMAGE
 
-// IMAGE: /assets/blog-images/signs-the-universe-is-guiding-you.jpg
+  ## A Practical Testing Protocol (Gita-Informed)
 
-## Real-Life Story
+  - Pause and breathe: notice bodily tone and emotional color.
+  - Take a small, reversible step that tests the nudge (a conversation, a short experiment).
+  - Observe results over time: does curiosity deepen or does friction increase?
 
-A colleague repeatedly encountered a phrase across books, podcasts, and conversations. Curious, she followed the thread and discovered a vocational shift that felt uncannily right. The process took months and small experiments, not a single dramatic sign.
+  This method trains practical discernment; the Gita values repeated, attentive testing rather than blind obedience.
 
-## About the Author
+  // IMAGE
 
-My work blends contemplative practice with practical decision-making. Over years of mentoring, I’ve helped people learn to test and respond to inner nudges wisely.
+  ## Story: Testing a Nudge
 
-## Parting Advice
+  A person I know noticed the same idea appearing across media and conversations. She treated it as an invitation and tried small experiments — a class, a volunteer shift, and a short writing project. Each test supplied data. Over months a coherent pattern emerged, affirming the inner movement.
 
-Treat signs as offers, not commands. Test them kindly with small steps and notice whether they open new space or create contraction.
-`,
+  ## About the Author
+
+  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching applied Gita practices and mentoring seekers in practical discernment.
+
+  ## Final Note
+
+  Treat signs as invitations for skillful experimentation. Use small tests, steady attention, and the Gita’s emphasis on intention and right action to translate inner nudges into wise movement.`,
     category: "Spirituality",
     date: "Oct 01, 2025",
     image: "/assets/blog-images/signs-the-universe-is-guiding-you.webp",
@@ -163,31 +170,38 @@ Treat signs as offers, not commands. Test them kindly with small steps and notic
     slug: "you-are-not-what-happens-to-you",
     excerpt:
       "You are not the events that happen to you. Learn practical ways to observe experience without absorbing it and build inner steadiness through practice.",
-    content: `One of the most liberating teachings from the Bhagavad Gita is the idea that our true self is not defined by passing events. The distinction between the witness and the story allows us to respond to life with equanimity rather than reactivity.
+    content: `One of the central teachings of the Bhagavad Gita is that the deeper Self transcends passing events. Arjuna's identity fused with outcomes, and Krishna shows him how to stand as witness rather than collapse into the drama. This distinction — witness versus story — is practical and liberating.
 
-// IMAGE: /assets/blog-images/you-are-not-what-happens-to-you.svg
+  // IMAGE
 
-## Distinguish Experience from Identity
+  ## Naming Versus Becoming
 
-When something tough happens, notice the difference between "I am hurt" (identity) and "I am experiencing hurt" (event). That small linguistic shift creates the space needed to respond rather than be consumed.
+  When we equate our identity with events, we make every setback a verdict. The Gita invites different language: practice saying "I am experiencing grief" rather than "I am grief." Naming creates distance and agency. This minor linguistic shift supports wise action.
 
-## Practices to Build Distance
+  ## Practices to Build Healthy Distance
 
-- Label the emotion briefly (e.g., "anger," "sadness").
-- Scan the body to locate sensations and breathe into them.
-- Choose one intentional next action, even if small.
+  1) Label and Breathe
+  When strong emotion arises, pause and label it briefly. Follow this with a few slow breaths. The Gita’s teaching about steady action is enacted in such simple habits.
 
-### Example
-After a professional setback, one student I worked with used these steps: labeling, breath, and a single reorientation practice (a gratitude list). Within weeks, choices felt clearer and energy returned.
+  2) Short Witnessing Breaks
+  Throughout the day, practice a 30-second witness check: notice body sensations and the texture of thought. This practice builds capacity to observe rather than identify.
 
-## About the Author
+  // IMAGE
 
-I pair Gita-informed perspectives with modern coaching methods to help people create steady presence amid change.
+  3) Reorientation Action
+  Choose a small, intentional step after naming the experience: a short walk, a journaling prompt, or a call to a supportive friend. The Gita encourages right action anchored in inner steadiness.
 
-## Final Note
+  ## Example Application
 
-You do not have to erase emotion to be free from it; you only need to relate to it differently. That shift is subtle but profoundly transformative.
-`,
+  Following a painful job loss, one person I coached used simple steps: naming emotions, brief breath practice, and a daily page of reflection. Over weeks, identity loosened from the event and options for new work became visible.
+
+  ## About the Author
+
+  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching applied Gita practices and coaching individuals toward steady presence.
+
+  ## Closing Reflection
+
+  You do not have to erase feeling to be free from it. The Gita teaches us to relate differently—to observe, act with integrity, and return to the witness. Freedom grows when we practice these habits consistently.`,
     category: "Spiritual Growth",
     date: "Oct 10, 2025",
     image: "/assets/blog-images/you-are-not-what-happens-to-you.webp",
@@ -199,39 +213,46 @@ You do not have to erase emotion to be free from it; you only need to relate to 
     slug: "do-your-karma-leave-the-rest",
     excerpt:
       "Do your duty with care but release attachment to results. Practical instructions based on the Gita to reduce anxiety, deepen focus, and transform work into service.",
-    content: `The Bhagavad Gita's counsel to act without attachment is as much a psychological tool as it is spiritual guidance. When we obsess over results, our energy becomes scattered and anxious. Doing the work fully, then releasing the outcome, creates presence and better performance.
+    content: `The Bhagavad Gita’s teaching to act without attachment is a pragmatic method for modern work and mental health. When we obsess over outcomes, cognitive resources narrow and anxiety rises. Krishna’s counsel to Arjuna is elegantly practical: perform your duty with full attention, but do not cling to the fruit. This reorientation changes how we show up and how results unfold.
 
-// IMAGE: /assets/blog-images/do-your-karma-leave-the-rest.svg
+  // IMAGE
 
-## Why Attachment Harms Performance
+  ## Attachment and the Narrowing of Mind
 
-Attachment converts action into a pressure-filled exercise. The more invested we are in a single outcome, the more our nervous system tightens and our judgment narrows. The Gita suggests a different approach: act with integrity, skill, and devotion, then let the results unfold.
+  Attachment hijacks attention and constricts performance. When outcome is everything, curiosity and creative risk-taking decline. The Gita reframes effort: make your work an offering — the quality of action becomes the central axis, not the outcome.
 
-## How to Practice Karma Yoga Today
+  ## A Three-Step Practice for Work and Life
 
-### 1) Clarify Intention
-Before starting a task, identify the purpose. Are you serving someone, learning, or earning? Let intention live in your awareness.
+  1) Clarify Intention
+  Before any task, ask: "Why am I doing this?" Clarify whether the work serves learning, service, or livelihood. Clear intention reduces anxious fixation.
 
-### 2) Do the Work Well
-Bring your full attention to the task; quality of effort matters more than anxious striving.
+  2) Focus on Process Excellence
+  Bring full attention to immediate tasks. The Gita invites us to make the act itself the field of practice. Quality of presence is more valuable than frantic striving.
 
-// IMAGE: /assets/blog-images/do-your-karma-leave-the-rest.jpg
+  // IMAGE
 
-### 3) Release the Outcome
-Consciously set aside the result. Use a short ritual after completing work — a breath, a bow of the head, or a note — to mark the release.
+// IMAGE
 
-## Example from Real Life
+  3) Ritualized Release
+  After action, practice a short ritual of release: three deep breaths or a brief gratitude note. Ritual reinforces psychological separation between effort and outcome.
 
-A client obsessed over a presentation outcome and lost presence during delivery. After adopting the three-step approach (intention, full attention, release), she reported calmer delivery and better reception.
+  ## Example in Practice
 
-## About the Author
+  One client changed how she approached presentations. She set process-centered goals (clarity, presence) rather than outcome-focused metrics. The result: calmer delivery and better reception. The shift did not remove stakes; it changed the motivational structure.
 
-I combine scriptural insight and organizational coaching to help professionals reclaim clarity and reduce burnout.
+  ## Making This Daily
 
-## Closing Reflection
+  - Morning: clarify the day’s primary intention.
+  - During work: use brief presence checkpoints.
+  - Close the day with a release ritual.
 
-When work becomes an offering rather than a measurement of worth, anxiety falls away and meaning grows.
-`,
+  ## About the Author
+
+  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching applied Gita practices to professionals seeking clarity and resilient performance.
+
+  ## Final Reflection
+
+  When work becomes a sincere offering rather than a measure of worth, the mind frees itself to act with creativity, care, and steadiness. The Gita’s wisdom trains us to do the work well and let the rest unfold.`,
     category: "Wisdom",
     date: "Oct 10, 2025",
     image: "/assets/blog-images/do-your-karma-leave-the-rest.webp",

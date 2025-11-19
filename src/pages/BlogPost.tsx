@@ -100,23 +100,92 @@ const BlogPost = () => {
                 {(() => {
                   const nodes: any[] = [];
                   let paragraphCount = 0;
+                  // sequential image counter for shorthand `// IMAGE` blocks
+                  let imageSeq = 1;
 
                   contentBlocks.forEach((block, idx) => {
                     // IMAGE placeholder: // IMAGE: /path
+                    // handle explicit path: `// IMAGE: /assets/.../file.ext`
                     if (block.startsWith('// IMAGE:')) {
-                      const path = block.replace('// IMAGE:', '').trim();
+                      const originalPath = block.replace('// IMAGE:', '').trim();
+
+                      // Build an ordered candidate list: prefer same-basename .webp in blog-images,
+                      // then the original path, then common extensions for the same basename.
+                      let candidates: string[] = [];
+                      try {
+                        const parts = originalPath.split('/');
+                        const base = parts[parts.length - 1].replace(/\.[^.]+$/, '');
+                        candidates = [
+                          `/assets/blog-images/${base}.webp`,
+                          originalPath,
+                          `/assets/blog-images/${base}.jpg`,
+                          `/assets/blog-images/${base}.jpeg`,
+                          `/assets/blog-images/${base}.png`,
+                          `/assets/blog-images/${base}.svg`,
+                        ];
+                      } catch (err) {
+                        candidates = [originalPath];
+                      }
+
                       nodes.push(
                         <img
                           key={`img-${idx}`}
-                          src={path}
+                          src={candidates[0]}
                           alt={post.title}
                           decoding="async"
+                          data-attempts={`0`}
                           onError={(e) => {
-                            const t = e.currentTarget as HTMLImageElement;
+                            const t = e.currentTarget as HTMLImageElement & { dataset: any };
+                            const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
+                            t.dataset.attempts = String(attempts);
+                            if (attempts < candidates.length) {
+                              t.onerror = null;
+                              t.src = candidates[attempts];
+                              return;
+                            }
                             t.onerror = null;
                             t.src = fallbackSvgDataUrl;
                           }}
-                          className="rounded-lg mb-6 w-full object-cover"
+                          className="rounded-lg mb-6 w-full object-contain"
+                        />
+                      );
+                      return;
+                    }
+
+                    // shorthand: `// IMAGE` with no path — map sequentially to
+                    // /assets/blog-images/{slug}-1.webp, {slug}-2.webp, {slug}-3.webp, ...
+                    if (block.trim() === '// IMAGE') {
+                      const seq = imageSeq;
+                      imageSeq += 1;
+                      const basePath = `/assets/blog-images/${post.slug}-${seq}`;
+                      const candidates = [
+                        `${basePath}.webp`,
+                        `${basePath}.jpg`,
+                        `${basePath}.jpeg`,
+                        `${basePath}.png`,
+                        `${basePath}.svg`,
+                      ];
+
+                      nodes.push(
+                        <img
+                          key={`img-${idx}`}
+                          src={candidates[0]}
+                          alt={post.title}
+                          decoding="async"
+                          data-attempts={`0`}
+                          onError={(e) => {
+                            const t = e.currentTarget as HTMLImageElement & { dataset: any };
+                            const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
+                            t.dataset.attempts = String(attempts);
+                            if (attempts < candidates.length) {
+                              t.onerror = null;
+                              t.src = candidates[attempts];
+                              return;
+                            }
+                            t.onerror = null;
+                            t.src = fallbackSvgDataUrl;
+                          }}
+                          className="rounded-lg mb-6 w-full object-contain"
                         />
                       );
                       return;
@@ -210,8 +279,21 @@ const BlogPost = () => {
                         src={rp.image}
                         alt={rp.title}
                         decoding="async"
+                        data-attempts="0"
                         onError={(e) => {
-                          const t = e.currentTarget as HTMLImageElement;
+                          const t = e.currentTarget as HTMLImageElement & { dataset: any };
+                          const parts = (rp.image || '').split('/');
+                          const base = parts[parts.length - 1]?.replace(/\.[^.]+$/, '');
+                          const candidates = base
+                            ? [`/assets/blog-images/${base}.webp`, `/assets/blog-images/${base}.jpg`, `/assets/blog-images/${base}.jpeg`, `/assets/blog-images/${base}.png`, `/assets/blog-images/${base}.svg`, rp.image]
+                            : [rp.image];
+                          const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
+                          t.dataset.attempts = String(attempts);
+                          if (attempts <= candidates.length) {
+                            t.onerror = null;
+                            t.src = candidates[attempts - 1];
+                            return;
+                          }
                           t.onerror = null;
                           t.src = fallbackSvgDataUrl;
                         }}
