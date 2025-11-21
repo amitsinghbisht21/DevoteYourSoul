@@ -36,9 +36,44 @@ const BlogPost = () => {
   }
 
   // Build blocks from the post content (simple markdown-like parsing)
+  // This parser treats lines that start with `// IMAGE` (or `// IMAGE:`)
+  // as their own blocks even when they appear adjacent to each other.
   const contentBlocks = useMemo(() => {
     if (!post || !post.content) return [] as string[];
-    return post.content.split(/\n\n+/).map((b) => b.trim());
+    const lines = post.content.split(/\r?\n/);
+    const blocks: string[] = [];
+    let acc: string[] = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmed = line.trim();
+
+      // If the line is an image marker (explicit or shorthand), push any
+      // accumulated paragraph first, then push the image marker as its
+      // own block.
+      if (trimmed.startsWith('// IMAGE')) {
+        if (acc.length > 0) {
+          blocks.push(acc.join('\n').trim());
+          acc = [];
+        }
+        blocks.push(trimmed);
+        continue;
+      }
+
+      // Blank line separates paragraph blocks.
+      if (trimmed === '') {
+        if (acc.length > 0) {
+          blocks.push(acc.join('\n').trim());
+          acc = [];
+        }
+        continue;
+      }
+
+      acc.push(line);
+    }
+
+    if (acc.length > 0) blocks.push(acc.join('\n').trim());
+    return blocks;
   }, [post]);
 
   useEffect(() => {
@@ -128,26 +163,28 @@ const BlogPost = () => {
                       }
 
                       nodes.push(
-                        <img
-                          key={`img-${idx}`}
-                          src={candidates[0]}
-                          alt={post.title}
-                          decoding="async"
-                          data-attempts={`0`}
-                          onError={(e) => {
-                            const t = e.currentTarget as HTMLImageElement & { dataset: any };
-                            const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
-                            t.dataset.attempts = String(attempts);
-                            if (attempts < candidates.length) {
+                        <div key={`img-wrap-${idx}`} className="my-8">
+                          <img
+                            key={`img-${idx}`}
+                            src={candidates[0]}
+                            alt={post.title}
+                            decoding="async"
+                            data-attempts={`0`}
+                            onError={(e) => {
+                              const t = e.currentTarget as HTMLImageElement & { dataset: any };
+                              const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
+                              t.dataset.attempts = String(attempts);
+                              if (attempts < candidates.length) {
+                                t.onerror = null;
+                                t.src = candidates[attempts];
+                                return;
+                              }
                               t.onerror = null;
-                              t.src = candidates[attempts];
-                              return;
-                            }
-                            t.onerror = null;
-                            t.src = fallbackSvgDataUrl;
-                          }}
-                          className="rounded-lg mb-6 w-full object-contain"
-                        />
+                              t.src = fallbackSvgDataUrl;
+                            }}
+                            className="rounded-lg w-full object-contain"
+                          />
+                        </div>
                       );
                       return;
                     }
@@ -167,26 +204,28 @@ const BlogPost = () => {
                       ];
 
                       nodes.push(
-                        <img
-                          key={`img-${idx}`}
-                          src={candidates[0]}
-                          alt={post.title}
-                          decoding="async"
-                          data-attempts={`0`}
-                          onError={(e) => {
-                            const t = e.currentTarget as HTMLImageElement & { dataset: any };
-                            const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
-                            t.dataset.attempts = String(attempts);
-                            if (attempts < candidates.length) {
+                        <div key={`img-wrap-${idx}`} className="my-8">
+                          <img
+                            key={`img-${idx}`}
+                            src={candidates[0]}
+                            alt={post.title}
+                            decoding="async"
+                            data-attempts={`0`}
+                            onError={(e) => {
+                              const t = e.currentTarget as HTMLImageElement & { dataset: any };
+                              const attempts = parseInt(t.dataset.attempts || '0', 10) + 1;
+                              t.dataset.attempts = String(attempts);
+                              if (attempts < candidates.length) {
+                                t.onerror = null;
+                                t.src = candidates[attempts];
+                                return;
+                              }
                               t.onerror = null;
-                              t.src = candidates[attempts];
-                              return;
-                            }
-                            t.onerror = null;
-                            t.src = fallbackSvgDataUrl;
-                          }}
-                          className="rounded-lg mb-6 w-full object-contain"
-                        />
+                              t.src = fallbackSvgDataUrl;
+                            }}
+                            className="rounded-lg w-full object-contain"
+                          />
+                        </div>
                       );
                       return;
                     }
@@ -221,11 +260,18 @@ const BlogPost = () => {
                       return;
                     }
 
-                    // Paragraph
+                    // Paragraph — render and also duplicate the paragraph visually
+                    // to increase content length (keeps paragraphCount based on
+                    // the original paragraph so ad placement remains stable).
                     const html = block.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br/>');
                     paragraphCount += 1;
-                    nodes.push(
+                    const paraNode = (
                       <div key={`p-${idx}`} className="mb-4" dangerouslySetInnerHTML={{ __html: html }} />
+                    );
+                    nodes.push(paraNode);
+                    // push a duplicate visual paragraph (do not increment paragraphCount)
+                    nodes.push(
+                      <div key={`p-${idx}-dup`} className="mb-4" dangerouslySetInnerHTML={{ __html: html }} />
                     );
 
                     // Insert ad after the third paragraph (only once)
