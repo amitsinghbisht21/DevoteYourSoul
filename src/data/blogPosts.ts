@@ -28,8 +28,6 @@ export const blogPosts: BlogPost[] = [
 
   Consider how attachment to identity shapes choices: when you define yourself entirely by a role or result, losing that becomes existentially threatening. The Gita's remedy is disciplined reflection and right action: practice small, steady choices without clinging. That shift loosens the grip of panic and opens fertile ground for new directions.
 
-  // IMAGE
-
   ## Practical Steps, Gita-Guided
 
   1) Reframe the Moment as a Teacher
@@ -56,7 +54,7 @@ export const blogPosts: BlogPost[] = [
 
   ## About the Author
 
-  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching mindfulness, practical Gita study, and mentoring individuals in transitions. He blends scriptural insight with accessible practices for daily life.
+  author — M.A., Contemplative Studies; 3+ years teaching mindfulness, practical Gita study, and mentoring individuals in transitions. He blends scriptural insight with accessible practices for daily life.
 
   ## Closing Invitation
 
@@ -107,7 +105,7 @@ export const blogPosts: BlogPost[] = [
 
   ## About the Author
 
-  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching mindfulness, practical Gita interpretation, and mentoring groups and individuals in presence-based practices.
+  author — M.A., Contemplative Studies; 3+ years teaching mindfulness, practical Gita interpretation, and mentoring groups and individuals in presence-based practices.
 
   ## Closing Thought
 
@@ -155,7 +153,7 @@ export const blogPosts: BlogPost[] = [
 
   ## About the Author
 
-  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching applied Gita practices and mentoring seekers in practical discernment.
+  author — M.A., Contemplative Studies; 3+ years teaching applied Gita practices and mentoring seekers in practical discernment.
 
   ## Final Note
 
@@ -197,7 +195,7 @@ export const blogPosts: BlogPost[] = [
 
   ## About the Author
 
-  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching applied Gita practices and coaching individuals toward steady presence.
+  author — M.A., Contemplative Studies; 3+ years teaching applied Gita practices and coaching individuals toward steady presence.
 
   ## Closing Reflection
 
@@ -248,7 +246,7 @@ export const blogPosts: BlogPost[] = [
 
   ## About the Author
 
-  Amit Singh Bisht — M.A., Contemplative Studies; 3+ years teaching applied Gita practices to professionals seeking clarity and resilient performance.
+  author — M.A., Contemplative Studies; 3+ years teaching applied Gita practices to professionals seeking clarity and resilient performance.
 
   ## Final Reflection
 

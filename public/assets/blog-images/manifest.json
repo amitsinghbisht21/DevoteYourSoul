@@ -1,0 +1,46 @@
+{
+  "generated_at": "2025-11-19T00:00:00Z",
+  "note": "Each blog post expects three images. Upload image files with these exact names under /public/assets/blog-images/",
+  "posts": {
+    "when-you-feel-lost-read-this": [
+      "when-you-feel-lost-read-this-1.webp",
+      "when-you-feel-lost-read-this-2.webp",
+      "when-you-feel-lost-read-this-3.webp"
+    ],
+    "finding-peace-present-moment": [
+      "finding-peace-present-moment-1.webp",
+      "finding-peace-present-moment-2.webp",
+      "finding-peace-present-moment-3.webp"
+    ],
+    "signs-the-universe-is-guiding-you": [
+      "signs-the-universe-is-guiding-you-1.webp",
+      "signs-the-universe-is-guiding-you-2.webp",
+      "signs-the-universe-is-guiding-you-3.webp"
+    ],
+    "you-are-not-what-happens-to-you": [
+      "you-are-not-what-happens-to-you-1.webp",
+      "you-are-not-what-happens-to-you-2.webp",
+      "you-are-not-what-happens-to-you-3.webp"
+    ],
+    "do-your-karma-leave-the-rest": [
+      "do-your-karma-leave-the-rest-1.webp",
+      "do-your-karma-leave-the-rest-2.webp",
+      "do-your-karma-leave-the-rest-3.webp"
+    ],
+    "the-power-of-calm-in-chaos": [
+      "the-power-of-calm-in-chaos-1.webp",
+      "the-power-of-calm-in-chaos-2.webp",
+      "the-power-of-calm-in-chaos-3.webp"
+    ],
+    "detach-but-stay-kind": [
+      "detach-but-stay-kind-1.webp",
+      "detach-but-stay-kind-2.webp",
+      "detach-but-stay-kind-3.webp"
+    ],
+    "the-inner-battle": [
+      "the-inner-battle-1.webp",
+      "the-inner-battle-2.webp",
+      "the-inner-battle-3.webp"
+    ]
+  }
+}
